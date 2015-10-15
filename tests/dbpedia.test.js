@@ -1,31 +1,20 @@
-# jsparql
-Sparql client for node.js
-
-# Usage
-
-#### Define graph on client creation:
-```
-var sparql = require('jsparql');
+var sparql = require('../index.js');
 
 var client = new sparql('http://dbpedia.org/sparql', 'http://dbpedia.org');
 
 client.query('select distinct ?Concept where {[] a ?Concept} LIMIT 100', function (err, results) {
   if (err) throw err;
-  console.log(JSON.stringify(results));
+  console.log('Queried vars: ' + results.head.vars.join(', '));
+  console.log('Queried bindings length: ' + results.results.bindings.length);
 });
-```
 
-#### Define graph on each query:
-```
-var sparql = require('jsparql');
-
-var client = new sparql('http://dbpedia.org/sparql');
+client = new sparql('http://dbpedia.org/sparql');
 
 client.query({
   graph:'http://dbpedia.org',
   query: 'select distinct ?Concept where {[] a ?Concept} LIMIT 100'
 }, function (err, results) {
   if (err) throw err;
-  console.log(JSON.stringify(results));
+  console.log('Queried vars: ' + results.head.vars.join(', '));
+  console.log('Queried bindings length: ' + results.results.bindings.length);
 });
-```
