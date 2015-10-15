@@ -1,0 +1,26 @@
+{
+  "name": "jsparql",
+  "version": "0.0.1",
+  "description": "Sparql client for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGrin/jsparql.git"
+  },
+  "keywords": [
+    "sparql",
+    "rdf"
+  ],
+  "author": "MGrin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MGrin/jsparql/issues"
+  },
+  "homepage": "https://github.com/MGrin/jsparql#readme",
+  "dependencies": {
+    "querystring": "latest"
+  }
+}
