@@ -1,6 +1,8 @@
 # jsparql
 Sparql client for node.js
 
+Uses HHTP GET request since the POST one did not work well in my projects (probably I just forgot to set the graph name, and so the results were wrong...)
+
 # Usage
 
 #### Define graph on client creation:
